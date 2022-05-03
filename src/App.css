@@ -1,38 +1,295 @@
-.App {
+.list {
+  padding-left: 0;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: 1fr 1fr;
+  /* mỗi dòng height: 80px */
+  grid-auto-rows: 80px;
+}
+
+.list :nth-child(1) {
+  grid-column: 1/ span 2;
+}
+
+.list :nth-child(6) {
+  grid-column: 1/ span 2;
+}
+
+li {
+  background-color: #88d8b0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: 	#ffeead;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.container {
+  display: grid;
+  /* cột trái: width: 100px, cột phải: width: 100px; các cột ở giữa auto width = nhau */
+  grid-template-columns: 100px auto 100px;
+  /* dòng 1: height: 50px, dòng 2: height: 50px */
+  grid-template-rows: 50px 50px;
+  grid-gap: 3px;
+}
+.container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #ffeead;
+}
+
+html, body {
+background-color: #ffeead;
+margin: 10px;
+}
+
+.container > div:nth-child(1n) {
+background-color: #96ceb4;	
+}
+
+.container > div:nth-child(3n) {
+background-color: #88d8b0;
+}
+
+.container > div:nth-child(2n) {
+    background-color: #ff6f69;
+}
+
+.container > div:nth-child(4n) {
+    background-color: #ffcc5c;
+}
+.container1 {
+  display: grid;
+  margin-top: 1rem;
+  grid-gap: 3px;
+  grid-template-columns: repeat(2, 1fr);
+  /* dòng 1: height: 40px, dòng 2: height: 40px */
+  grid-template-rows: 40px 40px;
+}
+.container1 > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #ffeead;
+}
+
+html, body {
+background-color: #ffeead;
+margin: 10px;
+}
+
+.container1 > div:nth-child(1n) {
+background-color: #96ceb4;	
+}
+
+.container1 > div:nth-child(3n) {
+background-color: #88d8b0;
+}
+
+.container1 > div:nth-child(2n) {
+    background-color: #ff6f69;
+}
+
+.container1 > div:nth-child(4n) {
+    background-color: #ffcc5c;
+}
+.container2 {
+  height: 100%;
+  display: grid;
+  grid-gap: 3px;
+  grid-template-columns: repeat(12, 1fr);
+  /* dòng đầu vs dòng cuối: height: 40px, các dòng ở giữa height = nhau */
+  grid-template-rows: 40px auto 40px;
+}
+
+.header2 {
+  grid-column: 1 / -1;
+}
+
+.menu2 {}
+
+.content2 {
+  grid-column: 2 / -1;
+}
+
+.footer2 {
+  grid-column: 1 / -1;
+}
+.container2 > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #ffeead;
+}
+
+html, body {
+  box-sizing: border-box;
+  background-color: #ffeead;
+  height: 100%;
+  padding: 10px;
+  margin: 0px;
+}
+
+.container2 > div:nth-child(1n) {
+  background-color: #96ceb4;	
+}
+
+.container2 > div:nth-child(3n) {
+  background-color: #88d8b0;
+}
+
+.container2 > div:nth-child(2n) {
+  background-color: #ff6f69;
+}
+
+.container2 > div:nth-child(4n) {
+  background-color: #ffcc5c;
+}
+.container3 {
+  display: grid;
+  grid-gap: 5px;
+  /* 1 dòng có 6 cột, mỗi cột width: 100px */
+  grid-template-columns: repeat(6, 100px);
+  /* 2 dòng đầu mỗi dòng: height: 100px */
+  grid-template-rows: repeat(2, 100px);
+}
+.container3 > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #ffeead;
+}
+
+html, body {
+background-color: #ffeead;
+margin: 10px;
+}
+
+.container3 > div:nth-child(1n) {
+background-color: #96ceb4;	
+}
+
+.container3 > div:nth-child(3n) {
+background-color: #88d8b0;
+}
+
+.container3 > div:nth-child(2n) {
+    background-color: #ff6f69;
+}
+
+.container3 > div:nth-child(4n) {
+    background-color: #ffcc5c;
+}
+.container4 {
+  display: grid;
+  grid-gap: 5px;
+  /* không giới hạn số cột trên mỗi hàng, 1 cột width: 100px width parent càng lớn thì sẽ càng
+  chứa nhiều cột và ngược lại => Cột sẽ tự xuống dòng theo width */
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  /* dòng 1 và dòng 2 height: 100px */
+  grid-template-rows: 100px 100px;
+}
+.container4 > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #ffeead;
+}
+
+html, body {
+  background-color: #ffeead;
+  margin: 10px;
+}
+
+.container4 > div:nth-child(1n) {
+  background-color: #96ceb4;	
+}
+
+.container4 > div:nth-child(3n) {
+  background-color: #88d8b0;
+}
+
+.container4 > div:nth-child(2n) {
+  background-color: #ff6f69;
+}
+
+.container4 > div:nth-child(4n) {
+  background-color: #ffcc5c;
+}
+.grid-page5 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 40px 200px 40px;
+}
+
+.header5 {
+  grid-column: span 12;
+}
+
+.menu5 {
+  grid-column: span 2;
+}
+
+.content5 {
+  grid-column: span 10;
+}
+
+.footer5 {
+  grid-column: span 12;
+}
+html, body {
+  background-color: #ffeead;
+  margin: 10px;
+  font-size: 20px;
+}
+
+p {
+  color: #96ceb4;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flexbox-header5 > div {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 1em;
+  padding: 10px 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.flexbox-header5 {
+  background-color: #96ceb4;
+  color: #ffeead;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.header5 {
+    background-color: #96ceb4;	
 }
+
+.header5 :nth-child(2) {
+    padding: 0 40px;
+}
+
+.menu5 {
+    background-color: #ff6f69;
+}
+
+.content5 {
+    background-color: #ffcc5c;
+}
+
+.footer5 {
+    background-color: #88d8b0;
+}
+
+.grid-page5 > div {
+    color: #ffeead;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+}
+
