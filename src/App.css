@@ -225,6 +225,7 @@ html, body {
 .grid-page5 {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  /* dòng đầu và dòng cuối height: 40px, các dòng ở giữa mỗi dòng height: 200px */
   grid-template-rows: 40px 200px 40px;
 }
 
